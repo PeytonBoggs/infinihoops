@@ -10,9 +10,9 @@ import Recruit from './Recruit.js';
 import Info from './Info.js';
 
 function App() {
-  const[points, setPoints] = useState(1000)
-  const[lifetimePoints, setLifetimePoints] = useState(1000)
-  const[pointsPerSec, setPointsPerSec] = useState(1000)
+  const[points, setPoints] = useState(0)
+  const[lifetimePoints, setLifetimePoints] = useState(0)
+  const[pointsPerSec, setPointsPerSec] = useState(0)
 
   const[onePercentage, setOnePercentage] = useState(75)
   const[twoPercentage, setTwoPercentage] = useState(50)
