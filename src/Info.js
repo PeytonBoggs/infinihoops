@@ -13,10 +13,8 @@ export default function Info() {
                     <ModalCloseButton />
                     <ModalBody>
                         <Flex flexDirection="column">
-                            <Text>This is a HooHacks Hackathon project by Peyton Boggs,</Text>
-                            <Text>developed in under 24 hours and with very little sleep.</Text>
-                            <Text>Thanks for playing!</Text>
-                            <Text marginTop="1rem">Github Repo:</Text><Link color="blue.500" href="https://github.com/PeytonBoggs/infinihoops">https://github.com/PeytonBoggs/infinihoops</Link>
+                            <Text>The objective of the game is to score as many points as you can. Trade in your points for upgrades to score even more points! This is a HooHacks Hackathon project by Peyton Boggs, developed in around 12 straight hours. Have fun and thanks for playing!</Text>
+                            <Text marginTop="1rem">Github Repository:</Text><Link color="blue.500" href="https://github.com/PeytonBoggs/infinihoops">https://github.com/PeytonBoggs/infinihoops</Link>
                             <Text marginTop="1rem">LinkedIn:</Text><Link color="blue.500" href="https://www.linkedin.com/in/peyton-boggs/">https://www.linkedin.com/in/peyton-boggs/</Link>
                         </Flex>
                     </ModalBody>

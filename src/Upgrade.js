@@ -64,7 +64,7 @@ export default function Upgrade({ points, setPoints, lifetimePoints, setShowTwo,
                 {upTwoShown && (
                     <div>
                         <Button className="button" onClick={() => upgrade("two")} isDisabled={getDisabled("two")}>
-                        Unlock 2-pt
+                        Unlock 2-pt Shot
                         </Button>
                         <Text className="buttonText">Cost: 25 pts</Text>
                     </div>
@@ -72,7 +72,7 @@ export default function Upgrade({ points, setPoints, lifetimePoints, setShowTwo,
                 {upThreeShown && (lifetimePoints >= 50) && (
                     <div>
                         <Button className="button" onClick={() => upgrade("three")} isDisabled={getDisabled("three")}>
-                        Unlock 3-pt
+                        Unlock 3-pt Shot
                         </Button>
                         <Text className="buttonText">Cost: 50 pts</Text>
                     </div>
