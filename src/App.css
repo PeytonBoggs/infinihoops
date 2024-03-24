@@ -30,12 +30,12 @@
 .mainBox {
   padding: 0.5rem;
   margin: 2rem;
+  width: 15rem;
   background-color: #D17B0F;
 }
 
 .button {
   margin: 1rem;
-  width: 10rem;
 }
 
 .buttonText {

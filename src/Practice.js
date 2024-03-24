@@ -11,17 +11,17 @@ export default function Practice({ points, setPoints, onePercentage, twoPercenta
             case 1:
                 setPoints(points - oneCost)
                 setOneCost(oneCost + 1)
-                setOnePercentage(onePercentage + 1)
+                setOnePercentage(onePercentage + 5)
                 break
             case 2:
                 setPoints(points - twoCost)
                 setTwoCost(twoCost + 2)
-                setTwoPercentage(twoPercentage + 1)
+                setTwoPercentage(twoPercentage + 5)
                 break
             case 3:
                 setPoints(points - threeCost)
                 setThreeCost(threeCost + 3)
-                setThreePercentage(threePercentage + 1)
+                setThreePercentage(threePercentage + 5)
                 break
         }
     }
@@ -50,15 +50,15 @@ export default function Practice({ points, setPoints, onePercentage, twoPercenta
         <Flex flexDirection="column" alignItems="center" className="mainBox">
             <Text className="buttonText" fontSize="2rem" margin="0.5rem">Practice</Text>
             <Button onClick={() => practice(1)} className="button" isDisabled={getDisabled(1)}>
-                Practice FT
+                Free Throw (+5%)
             </Button>
             <Text className="buttonText">Cost: {oneCost} pts</Text>
             <Button onClick={() => practice(2)} className="button" isDisabled={getDisabled(2)}>
-                Practice 2-pt
+                2-point (+5%)
             </Button>
             <Text className="buttonText">Cost: {twoCost} pts</Text>
             <Button onClick={() => practice(3)} className="button" isDisabled={getDisabled(3)}>
-                Practice 3-pt
+                3-point (+5%)
             </Button>
             <Text className="buttonText">Cost: {threeCost} pts</Text>
         </Flex>

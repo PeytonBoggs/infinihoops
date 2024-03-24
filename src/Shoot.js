@@ -11,6 +11,7 @@ export default function Shoot({ points, setPoints, lifetimePoints, setLifetimePo
     function addPoints(toAdd) {
         setPoints(points + toAdd)
         setLifetimePoints(lifetimePoints + toAdd)
+        console.log(lifetimePoints)
     }
     
     return (
