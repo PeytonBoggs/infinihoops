@@ -7,8 +7,8 @@ export default function Info() {
         <Flex flex="1" alignItems="center" justifyContent="right">
             <Button onClick={onOpen} width="10rem">Info</Button>
             <Modal isOpen={isOpen} onClose={onClose}>
-                <ModalOverlay>
-                <ModalContent>
+                <ModalOverlay alignItems="center">
+                <ModalContent margin="1rem">
                     <ModalHeader>Welcome to infinihoops!</ModalHeader>
                     <ModalCloseButton />
                     <ModalBody>

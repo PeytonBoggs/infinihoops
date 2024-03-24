@@ -8,16 +8,16 @@ export default function Shoot({ points, setPoints, lifetimePoints, setLifetimePo
             toast({
                 title: "Good! +" + points,
                 status: "success",
-                duration: 1000,
-                position: "top-left"
+                duration: 500,
+                position: "top"
             })
             return points
         }
         toast({
             title: "Miss",
             status: "error",
-            duration: 1000,
-            position: "top-left"
+            duration: 500,
+            position: "top"
         })
         return 0
     }
