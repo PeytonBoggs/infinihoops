@@ -1,4 +1,4 @@
-import { Flex, space } from '@chakra-ui/react';
+import { Flex } from '@chakra-ui/react';
 import './App.css';
 import Title from './Title.js'
 import PointCounter from './PointCounter.js';
