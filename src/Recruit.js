@@ -1,12 +1,12 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
-export default function Hire({ points, setPoints, pointsPerSec, setPointsPerSec }) {
+export default function Recruit({ points, setPoints, pointsPerSec, setPointsPerSec }) {
     const[hsCost, setHsCost] = useState(50)
     const[collegeCost, setCollegeCost] = useState(200)
     const[nbaCost, setNbaCost] = useState(500)
 
-    function hire(player) {
+    function recruit(player) {
         switch(player) {
             case("hs"):
                 setPoints(points - hsCost)
@@ -48,16 +48,16 @@ export default function Hire({ points, setPoints, pointsPerSec, setPointsPerSec 
 
     return (
         <Flex flexDirection="column" alignItems="center" className="mainBox">
-            <Text className="buttonText" fontSize="2rem" margin="0.5rem">Hire</Text>
-            <Button onClick={() => hire("hs")} className="button" isDisabled={getDisabled("hs")}>
+            <Text className="buttonText" fontSize="2rem" margin="0.5rem">Recruit</Text>
+            <Button onClick={() => recruit("hs")} className="button" isDisabled={getDisabled("hs")}>
                 H.S. Captain (+1 pt/sec)
             </Button>
             <Text className="buttonText">Cost: {hsCost} pts</Text>
-            <Button onClick={() => hire("college")} className="button" isDisabled={getDisabled("college")}>
+            <Button onClick={() => recruit("college")} className="button" isDisabled={getDisabled("college")}>
                 College Star (+15 pts/sec)
             </Button>
             <Text className="buttonText">Cost: {collegeCost} pts</Text>
-            <Button onClick={() => hire("nba")} className="button" isDisabled={getDisabled("nba")}>
+            <Button onClick={() => recruit("nba")} className="button" isDisabled={getDisabled("nba")}>
                 NBA MVP (+50 pts/sec)
             </Button>
             <Text className="buttonText">Cost: {nbaCost} pts</Text>

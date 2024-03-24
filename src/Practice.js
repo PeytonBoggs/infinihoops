@@ -54,11 +54,11 @@ export default function Practice({ points, setPoints, onePercentage, twoPercenta
             </Button>
             <Text className="buttonText">Cost: {oneCost} pts</Text>
             <Button onClick={() => practice(2)} className="button" isDisabled={getDisabled(2)}>
-                2-point (+5%)
+                2-Point (+5%)
             </Button>
             <Text className="buttonText">Cost: {twoCost} pts</Text>
             <Button onClick={() => practice(3)} className="button" isDisabled={getDisabled(3)}>
-                3-point (+5%)
+                3-Point (+5%)
             </Button>
             <Text className="buttonText">Cost: {threeCost} pts</Text>
         </Flex>

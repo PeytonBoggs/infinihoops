@@ -1,11 +1,11 @@
 import { Button, Flex, Text } from "@chakra-ui/react";
 import { useState } from "react";
 
-export default function Upgrade({ points, setPoints, lifetimePoints, setShowTwo, setShowThree, setShowPractice, setShowHire }) {
+export default function Upgrade({ points, setPoints, lifetimePoints, setShowTwo, setShowThree, setShowPractice, setShowRecruit }) {
     const [upTwoShown, setUpTwoShown] = useState(true)
     const [upThreeShown, setUpThreeShown] = useState(true)
     const [upPracticeShown, setUpPracticeShown] = useState(true)
-    const [upHireShown, setUpHireShown] = useState(true)
+    const [upRecruitShown, setUpRecruitShown] = useState(true)
     
     function upgrade(unlock) {
         switch(unlock) {
@@ -24,10 +24,10 @@ export default function Upgrade({ points, setPoints, lifetimePoints, setShowTwo,
                 setShowPractice(true)
                 setUpPracticeShown(false)
                 break
-            case "hire":
+            case "recruit":
                 setPoints(points - 500)
-                setShowHire(true)
-                setUpHireShown(false)
+                setShowRecruit(true)
+                setUpRecruitShown(false)
                 break
         }
     }
@@ -49,7 +49,7 @@ export default function Upgrade({ points, setPoints, lifetimePoints, setShowTwo,
                     return true
                 }
                 return false
-            case "hire":
+            case "recruit":
                     if (points < 500) {
                         return true
                     }
@@ -85,10 +85,10 @@ export default function Upgrade({ points, setPoints, lifetimePoints, setShowTwo,
                         <Text className="buttonText">Cost: 100 pts</Text>
                     </div>
                 )}
-                {upHireShown && (lifetimePoints >= 500) && (
+                {upRecruitShown && (lifetimePoints >= 500) && (
                     <div>
-                        <Button className="button" onClick={() => upgrade("hire")} isDisabled={getDisabled("hire")}>
-                        Become an Agent
+                        <Button className="button" onClick={() => upgrade("recruit")} isDisabled={getDisabled("recruit")}>
+                        Become a Coach
                         </Button>
                         <Text className="buttonText">Cost: 500 pts</Text>
                     </div>

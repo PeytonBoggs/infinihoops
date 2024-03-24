@@ -6,12 +6,13 @@ import Shoot from './Shoot.js';
 import { useEffect, useState } from 'react';
 import Practice from './Practice.js';
 import Upgrade from './Upgrade.js';
-import Hire from './Hire.js';
+import Recruit from './Recruit.js';
+import Info from './Info.js';
 
 function App() {
-  const[points, setPoints] = useState(1000)
-  const[lifetimePoints, setLifetimePoints] = useState(1000)
-  const[pointsPerSec, setPointsPerSec] = useState(1000)
+  const[points, setPoints] = useState(0)
+  const[lifetimePoints, setLifetimePoints] = useState(0)
+  const[pointsPerSec, setPointsPerSec] = useState(0)
 
   const[onePercentage, setOnePercentage] = useState(75)
   const[twoPercentage, setTwoPercentage] = useState(50)
@@ -20,7 +21,7 @@ function App() {
   const[showTwo, setShowTwo] = useState(false)
   const[showThree, setShowThree] = useState(false)
   const[showPractice, setShowPractice] = useState(false)
-  const[showHire, setShowHire] = useState(false)
+  const[showRecruit, setShowRecruit] = useState(false)
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -33,20 +34,21 @@ function App() {
 
   return (
   <Flex className='App-header' alignItems={'stretch'} padding="1rem">
-    <Flex flex="1" alignItems="center" justifyContent="space-between">
+    <Flex flex="1" alignItems="center" justifyContent="space-evenly">
       <Title />
-      <PointCounter points={points} />
+      <Info />
     </Flex>
+    <PointCounter points={points} />
     <Flex flex="10" alignItems="center" justifyContent="center" flexWrap="wrap">
       <Shoot points={points} setPoints={setPoints} lifetimePoints={lifetimePoints} setLifetimePoints={setLifetimePoints} showTwo={showTwo} showThree={showThree} onePercentage={onePercentage} twoPercentage={twoPercentage} threePercentage={threePercentage}/>
       {(lifetimePoints >= 25 &&
-        <Upgrade points={points} setPoints={setPoints} lifetimePoints={lifetimePoints} setShowTwo={setShowTwo} setShowThree={setShowThree} setShowPractice={setShowPractice} setShowHire={setShowHire}/>
+        <Upgrade points={points} setPoints={setPoints} lifetimePoints={lifetimePoints} setShowTwo={setShowTwo} setShowThree={setShowThree} setShowPractice={setShowPractice} setShowRecruit={setShowRecruit}/>
       )}
       {showPractice && (
         <Practice points={points} setPoints={setPoints} onePercentage={onePercentage} twoPercentage={twoPercentage} threePercentage={threePercentage} setOnePercentage={setOnePercentage} setTwoPercentage={setTwoPercentage} setThreePercentage={setThreePercentage}/>
       )}
-      {showHire &&(
-        <Hire points={points} setPoints={setPoints} pointsPerSec={pointsPerSec} setPointsPerSec={setPointsPerSec}/>
+      {showRecruit &&(
+        <Recruit points={points} setPoints={setPoints} pointsPerSec={pointsPerSec} setPointsPerSec={setPointsPerSec}/>
       )}
     </Flex>
   </Flex>
