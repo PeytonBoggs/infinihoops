@@ -9,9 +9,9 @@ import Upgrade from './Upgrade.js';
 import Hire from './Hire.js';
 
 function App() {
-  const[points, setPoints] = useState(0)
-  const[lifetimePoints, setLifetimePoints] = useState(0)
-  const[pointsPerSec, setPointsPerSec] = useState(0)
+  const[points, setPoints] = useState(1000)
+  const[lifetimePoints, setLifetimePoints] = useState(1000)
+  const[pointsPerSec, setPointsPerSec] = useState(1000)
 
   const[onePercentage, setOnePercentage] = useState(75)
   const[twoPercentage, setTwoPercentage] = useState(50)
@@ -33,8 +33,10 @@ function App() {
 
   return (
   <Flex className='App-header' alignItems={'stretch'} padding="1rem">
-    <Title />
-    <PointCounter points={points} />
+    <Flex flex="1" alignItems="center" justifyContent="space-between">
+      <Title />
+      <PointCounter points={points} />
+    </Flex>
     <Flex flex="10" alignItems="center" justifyContent="center" flexWrap="wrap">
       <Shoot points={points} setPoints={setPoints} lifetimePoints={lifetimePoints} setLifetimePoints={setLifetimePoints} showTwo={showTwo} showThree={showThree} onePercentage={onePercentage} twoPercentage={twoPercentage} threePercentage={threePercentage}/>
       {(lifetimePoints >= 25 &&

@@ -3,7 +3,7 @@
 }
 
 .App-header {
-  background-color: #312B21;
+  background-color: #F8D0A0;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -16,22 +16,31 @@
 .header {
   font-family: Impact;
   font-size: 3rem;
+  color: #392104;
 }
 
 .pointBox {
   padding: 0.5rem;
-  background-color: #EAE0D5;
+  background-color: #D17B0F;
   border-color: orange;
+  -webkit-text-fill-color: #392104;
   border-width: 0.1rem;
-  border-radius: 10%;
+  border-radius: 0;
   font-family: monospace;
+  font-size: xx-large;
 }
 
 .mainBox {
   padding: 0.5rem;
   margin: 2rem;
   width: 15rem;
+  height: 21rem;
+  overflow-y: auto;
+  overflow-x: hidden;
   background-color: #D17B0F;
+  border-color: orange;
+  border-width: 0.1rem;
+  border-radius: 10%;
 }
 
 .button {
@@ -43,5 +52,5 @@
   text-align: center;
   font-family: monospace;
   font-size: 1rem;
-  color: black;
+  color: #392104;
 }

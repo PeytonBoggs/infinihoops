@@ -1,17 +1,30 @@
-import { Button, Flex, Text } from "@chakra-ui/react";
+import { Button, Flex, Text, useToast } from "@chakra-ui/react";
 
 export default function Shoot({ points, setPoints, lifetimePoints, setLifetimePoints, showTwo, showThree, onePercentage, twoPercentage, threePercentage }) {    
+    const toast = useToast()
+    
     function shoot(points, percentage) {
         if (Math.random() * 100 < percentage) {
+            toast({
+                title: "Good! +" + points,
+                status: "success",
+                duration: 1000,
+                position: "top-left"
+            })
             return points
         }
+        toast({
+            title: "Miss",
+            status: "error",
+            duration: 1000,
+            position: "top-left"
+        })
         return 0
     }
     
     function addPoints(toAdd) {
         setPoints(points + toAdd)
         setLifetimePoints(lifetimePoints + toAdd)
-        console.log(lifetimePoints)
     }
     
     return (
