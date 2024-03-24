@@ -16,11 +16,13 @@ function App() {
 
 
   return (
-  <Flex className='App-header'>
+  <Flex className='App-header' alignItems={'stretch'} padding="1rem">
     <Title />
     <PointCounter points={points} />
-    <PointButtons points={points} setPoints={setPoints} onePercentage={onePercentage} twoPercentage={twoPercentage} threePercentage={threePercentage}/>
-    <Practice onePercentage={onePercentage} twoPercentage={twoPercentage} threePercentage={threePercentage} setOnePercentage={setOnePercentage} setTwoPercentage={setTwoPercentage} setThreePercentage={setThreePercentage}/>
+    <Flex flex="10" alignItems="center" justifyContent="center">
+      <PointButtons points={points} setPoints={setPoints} onePercentage={onePercentage} twoPercentage={twoPercentage} threePercentage={threePercentage}/>
+      <Practice onePercentage={onePercentage} twoPercentage={twoPercentage} threePercentage={threePercentage} setOnePercentage={setOnePercentage} setTwoPercentage={setTwoPercentage} setThreePercentage={setThreePercentage}/>
+    </Flex>
   </Flex>
   );
 }

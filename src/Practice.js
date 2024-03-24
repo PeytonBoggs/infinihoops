@@ -1,4 +1,4 @@
-import { Button, Flex } from "@chakra-ui/react";
+import { Button, Flex, Text } from "@chakra-ui/react";
 
 export default function Practice({ onePercentage, twoPercentage, threePercentage, setOnePercentage, setTwoPercentage, setThreePercentage }) {
     function practice(shot) {
@@ -16,16 +16,20 @@ export default function Practice({ onePercentage, twoPercentage, threePercentage
     }
     
     return (
-        <Flex flex="2" flexDirection="column">
-            <Button onClick={() => practice(onePercentage)} margin="1rem">
+        <Flex flexDirection="column" alignItems="center" className="mainBox">
+            <Text className="buttonText" fontSize="2rem" margin="0.5rem">Shop</Text>
+            <Button onClick={() => practice(onePercentage)} className="button">
                 Practice FT
             </Button>
-            <Button onClick={() => practice(twoPercentage)} margin="1rem">
+            <Text className="buttonText">Cost: 0</Text>
+            <Button onClick={() => practice(twoPercentage)} className="button">
                 Practice 2-pt
             </Button>
-            <Button onClick={() => practice(threePercentage)} margin="1rem">
+            <Text className="buttonText">Cost: 0</Text>
+            <Button onClick={() => practice(threePercentage)} className="button">
                 Practice 3-pt
             </Button>
+            <Text className="buttonText">Cost: 0</Text>
         </Flex>
     );
 }

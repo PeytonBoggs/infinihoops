@@ -3,12 +3,45 @@
 }
 
 .App-header {
-  background-color: goldenrod;
+  background-color: #312B21;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);
+  color: #D17B0F;
+}
+
+.header {
+  font-family: Impact;
+  font-size: 3rem;
+}
+
+.pointBox {
+  padding: 0.5rem;
+  background-color: #EAE0D5;
+  border-color: orange;
+  border-width: 0.1rem;
+  border-radius: 10%;
+  font-family: monospace;
+}
+
+.mainBox {
+  padding: 0.5rem;
+  margin: 2rem;
+  background-color: #D17B0F;
+}
+
+.button {
+  margin: 1rem;
+  width: 10rem;
+}
+
+.buttonText {
+  margin-top: -1rem;
+  text-align: center;
+  font-family: monospace;
+  font-size: 1rem;
   color: black;
 }
