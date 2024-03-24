@@ -1,3 +1,12 @@
+# infinihoops
+
+This is a game about shooting basketballs and scoring as many points as you can!
+
+It was created for HooHacks, a Hackathon at the University of Virginia that lasted 24 hours.
+This project utilized React, Chakra UI, JavaScript, and CSS in its development.
+All development was done by Peyton Boggs.
+
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
